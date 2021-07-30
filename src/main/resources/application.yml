@@ -1,0 +1,15 @@
+#模板指定
+spring:
+  thymeleaf:
+    cache: false # 开发时关闭缓存,不然没法看到实时页面
+    mode: HTML # 用非严格的 HTML
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: utf-8
+  profiles:
+    active: dev
+#  mvc:
+#    static-path-pattern: /static/**
+project:
+  salt: "blog"
+  pageSize: "5"

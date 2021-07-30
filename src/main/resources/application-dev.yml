@@ -1,0 +1,22 @@
+spring:
+  #数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    password: 123456
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #mybatis
+mybatis:
+  type-aliases-package: com.example.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  #日志配置
+logging:
+  level:
+    root: info
+    com.example: debug
+  file:
+    path: logs/blog-dev.log
+server:
+  port: 8081
